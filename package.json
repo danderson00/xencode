@@ -1,0 +1,27 @@
+{
+  "name": "xencode",
+  "version": "0.0.1",
+  "description": "Cross platform video encoding",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack -d & serve ."
+  },
+  "browser": {
+    "fs": false,
+    "path": false
+  },
+  "keywords": [
+    "webm",
+    "video",
+    "encoding"
+  ],
+  "author": "danderson00",
+  "license": "MIT",
+  "dependencies": {
+    "parallel-module": "0.0.4"
+  },
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
+}
