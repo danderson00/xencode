@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack -d & serve ."
+    "start": "webpack & serve",
+    "build": "webpack"
   },
   "browser": {
     "fs": false,
@@ -22,6 +23,7 @@
     "parallel-module": "0.0.4"
   },
   "devDependencies": {
+    "serve": "^6.4.1",
     "webpack": "^3.10.0"
   }
 }

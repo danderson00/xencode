@@ -3,7 +3,6 @@ var webpack = require('webpack')
 module.exports = {
   entry: {
     "encoder": require.resolve('./src/worker.js'),
-    "encoder.min": require.resolve('./src/worker.js'),
     "sample": require.resolve('./sample/index.js')
   },
   output: {
@@ -12,7 +11,7 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
-      include: /\.min\.js$/,
+      include: /encoder\.js$/,
       minimize: true
     })
   ]
