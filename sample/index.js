@@ -67,7 +67,7 @@ function startVideo(video) {
 }
 
 function playEncodedFrames(target, encoder) {
-  encoder.toDataURL().then(url => {
+  encoder.toBlobURL().then(url => {
     target.src = url
     target.play()
   })

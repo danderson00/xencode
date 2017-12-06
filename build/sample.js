@@ -150,7 +150,7 @@ function startVideo(video) {
 }
 
 function playEncodedFrames(target, encoder) {
-  encoder.toDataURL().then(url => {
+  encoder.toBlobURL().then(url => {
     target.src = url
     target.play()
   })
@@ -192,9 +192,19 @@ module.exports = function(options) {
           return new WebMContainer(new WebMVideoTrack(options.width, options.height, options.frameRate, frames))
         })
       },
-      toDataURL: function() {
+      toDataURL: function () {
         return api.toWebMContainer().then(function(container) {
           return container.toDataURL()
+        })
+      },
+      toBlob: function () {
+        return api.toWebMContainer().then(function(container) {
+          return new Blob([new Uint8Array(container.toBuffer())])
+        })
+      },
+      toBlobURL: function () {
+        return api.toBlob().then(function(blob) {
+          return URL.createObjectURL(blob)
         })
       }
     }

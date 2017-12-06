@@ -9,7 +9,7 @@ worker(function(options) {
     
     // converting an Array to a TypedArray has significant performance benefits when marshalling data to / from workers
     encoded.data = Int8Array.from(encoded.data)
-    console.log('Encoded in ' + (Date.now() - start) + 'ms')
+    console.log('Encoded frame in ' + (Date.now() - start) + 'ms')
     return encoded
   }
 })

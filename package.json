@@ -1,6 +1,6 @@
 {
   "name": "xencode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cross platform video encoding",
   "main": "src/index.js",
   "scripts": {
