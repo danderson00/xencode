@@ -1,6 +1,6 @@
 {
   "name": "xencode",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Cross platform video encoding",
   "main": "src/index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "author": "danderson00",
   "license": "MIT",
   "dependencies": {
-    "parallel-module": "0.0.4"
+    "parallel-module": "0.0.5"
   },
   "devDependencies": {
     "serve": "^6.4.1",
