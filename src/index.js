@@ -19,10 +19,12 @@ module.exports = function(options) {
       },
       frames: function () {
         return Promise.all(frames).then(function(encodedFrames) {
-          return encodedFrames.map((frame, index) => Object.assign({}, frame, {
-            duration: 1000 / options.frameRate,
-            timecode: index * (1000 / options.frameRate)
-          }))
+          return encodedFrames.map(function(frame, index) { 
+              return Object.assign({}, frame, {
+                duration: 1000 / options.frameRate,
+                timecode: index * (1000 / options.frameRate)
+              })
+          })
         })
       },
       toWebMContainer: function () {
