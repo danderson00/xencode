@@ -1,3 +1,4 @@
+var webm = require('../src/webm')
 var client = require('./client')
 
 module.exports = function(options) {
@@ -26,7 +27,7 @@ module.exports = function(options) {
       },
       toWebMContainer: function () {
         return api.frames().then(function(frames) {
-          return new WebMContainer(new WebMVideoTrack(options.width, options.height, options.frameRate, frames))
+          return new webm.WebMContainer(new webm.WebMVideoTrack(options.width, options.height, options.frameRate, frames))
         })
       },
       toDataURL: function () {

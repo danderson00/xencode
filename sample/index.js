@@ -1,6 +1,5 @@
 // const client = require('../src/client')
 const createEncoder = require('../src')
-require('../src/webm')
 
 const options = {
   width: 320,
